@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*não conta o tamanho do elemento com as bordas e margens.*/
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+
+html {
+    scroll-behavior: smooth;
+  
+}
+
+
+body {
+    background: #f2f2f2
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*toda largura da minha tela*/
+    display: flex;
+    /*para ajustar todos os elementos*/
+    justify-content: center;
+    /*para alinha no centro*/
+    background: #333;
+    z-index: 5;
+    /*posição em camadas*/
+}
+
+/*Toda vez que for class usa-se ponto(.)*/
+.navbar {
+    display: flex;
+    padding: 0 10px;
+    max-width: 1200px;
+    /*valor de lagura no máximo 1200px*/
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /*espaçaneto igual entre os elementos da NAVBAR*/
+}
+
+.navbar input#menu-toggler{
+    display: none;
+    /*faz ele desaparecer*/
+}
+
+
+.navbar #hamburguer-btn {
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .all-links {
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar .all-links li {
+    position: relative;
+    list-style: none;
+    /*tirar os pontos */
+}
+
+.navbar.logo a {
+    list-style: none;
+    /*tirar os sublinhado*/
+    align-items: center;
+    margin: left;
+}
+
+header a, footer a{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #f2f2f2;
+    height: 100%;
+    /* vai pegar a altura do pai que é o header*/
+    padding: 20px 0;
+    display: inline-block;
+    /*para poder mudar o tamanho de cada caixa*/
+}
+
+header a:hover, footer a:hover{
+    color: aquamarine;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0 0;
+}
+.homepage {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("img/back.jpg");
+    background-position: center;
+    background-size: cover;
+  
+    /* para ser redimensionada sem perder a qualidade 
+*/}
+.homepage .content {
+    display: flex;
+    height: 85%;
+    z-index: 3;
+    align-items: center;
+    /*alinhas os itens.*/
+    justify-content: center;
+    flex-direction: column;
+    /*formato de coluna*/
+}
+
+.homepage .content h1 {
+    color: #000000;
+    -webkit-text-stroke-color: #3f0aff;
+    -webkit-text-stroke-width: 0.8px;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;   
+}
+
+.homepage .content p {
+    color: #000000;
+    -webkit-text-stroke-color: #3f0aff;
+    -webkit-text-stroke-width: 0.1px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;   
+    
+}
+
+.homepage .content text {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 130px rgba(210, 55, rgb(0, 0, 0), 4.9);
+
+    /*pequena sobra*/
+}
+
+.content a {
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    /*para arredondar as arestas*/
+    background: #fff;
+    border: 2px solid ease;
+    /*sombra da caixa*/
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* o rem aumenta e diminui de acordo com o tamanho da tela*/
+
+/*o flex wrap wrap se não couber na linha ele joga para baixo. */
+
+section h2 {
+    font: 5rem;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+section > p {
+    text-align: center;
+
+
+}
+
+section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+section .cards .card {
+    background: #fff;
+    padding: 40px 15px;
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    width: 32%;
+    text-align: center;
+}
+
+.servicos .card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    object-fit: cover;
+    /* a sua imagem é redimensionada com
+     a proporção e quantidade de pixel resolução.*/
+     
+
+}
+
+.portifolio .cards .card {
+    padding: 0 0 20px;
+
+}
+
+.portifolio .card img {
+
+    width: 100%;
+    padding-bottom: 10px;
+    aspect-ratio: 16/12;
+    object-fit: cover;
+    border-radius: 7px   
+}
+
+.cards .card p {
+    padding: 0 15px;
+    margin-top: 5px;
+}
+
+section.sobre {
+    margin: 0, auto;
+    /* pq auto?*/
+    max-width: 1200px;
+    align-items: center;
+
+    
+}
+
+.sobre h3 {
+    margin: 30px 0 10px;
+}
+
+.sobre .row {
+    padding: 0 10px;  
+
+}
+
+.sobre .team {
+    text-align: left;
+    width: 100%;
+
+}
+
+.sobre .team ul {
+    padding: 20px;
+
+}
+
+.contato .row {
+    margin: 60px 0 90px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato .row {
+    padding: 0 10px;
+    width: 85%;
+    
+}
+
+.contato .col p {
+    margin-bottom: 10px;
+    
+
+}
+
+.contato .col p i {
+    color: #713548;
+    margin-right: 10px;
+
+}
+
+.contato form input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 80%;
+    outline: none;
+    border: 1px solid #333
+}
+
+.contato form textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    height: 150px;
+    resize: vertical;
+    border: 1px solid #000
+}
+
+.contato form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #333;
+    transition: 0.2% ease;
+}
+.contato form button:hover {
+    background: #525252;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding: 20px 0;
+}
+
+footer div{
+    padding: 0 10px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer span{
+    color: #f2f2f2;
+}
+
+footer a{
+    padding: 0;
+}
+
+/*Responsividade*/
+/*
+.homepage::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(218, 87, 87);}
+    */
+@media screen and (max-width: 860px){
+    .navbar .all-links{
+        position:fixed;
+        left: -100%;
+        width: 300px;
+        display: block;
+        height: 100vh; /*toda altura da tela*/
+        top:75px;
+        background: #333;
+        transition: left 0.3s ease;
+    }
+
+.navbar #menu-toggler:checked~.all-links{
+    left: 0;
+}
+
+.navbar .all-links li{
+    font-size: 18px;
+}
+.navbar #hamburguer-btn{
+    display: block;
+}
+
+selection > p{
+    text-align: center;
+} 
+
+section .cards .card{
+    width: 47%;
+    margin-bottom: 30px;
+}
+
+.homepage .content h1{
+    font-size: 40px;
+    font-weight: 700px;
+    margin-bottom: 10px;
+}
+
+.homepage .content .text {
+    font-size: 17px;
+}
+
+.content a {
+    font-size: 17px;
+    padding: 9px 20px;
+}
+
+.contact .row {
+    flex-direction: column;
+}
+
+.contact .row .col{
+    width: 100%;
+}
+
+.contact .row .col:last-child {
+    margin-top:  40px;
+}
+
+footer a {
+    height: 0;
+}
+
+@media screen and (max-width: 560px) {
+    selection .cards .card {
+        width:100%;
+        margin-bottom: 30px;
+    }
+}
+
+}
+
